@@ -13,7 +13,7 @@ Since this package is not available on PyPI yet, you can install it directly fro
 
 ::
 
-  $ pip install -e git+https://github.com/rodrigoamaral/django-fullcalendar.git#egg=django-fullcalendar
+  $ pip install -e git+https://github.com/luismoralesp/django-fullcalendar.git#egg=django-fullcalendar
 
 Configuration
 -------------
