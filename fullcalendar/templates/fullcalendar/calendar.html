@@ -1,6 +1,13 @@
 <div id="calendar"></div>
 <script type="text/javascript">
 	$(document).ready(function() {
-	    $('#calendar').fullCalendar({ events: '{{url}}', contentHeight: 'auto' });
+	    if (!configure_calendar){
+	    	configure_calendar = {};
+	    }
+	    configure_calendar['events'] = '{{url}}';
+	    if (!configure_calendar['ontentHeight']){
+	    	configure_calendar['ontentHeight'] = 'auto';
+	    }
+	    $('#calendar').fullCalendar(configure_calendar);
 	});
 </script>
