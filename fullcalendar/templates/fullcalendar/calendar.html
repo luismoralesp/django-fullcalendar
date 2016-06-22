@@ -1,8 +1,8 @@
 <div id="calendar"></div>
 <script type="text/javascript">
 	$(document).ready(function() {
-	    if (!configure_calendar){
-	    	configure_calendar = {};
+	    if (!window.configure_calendar){
+	    	window.configure_calendar = {};
 	    }
 	    configure_calendar['events'] = '{{url}}';
 	    if (!configure_calendar['ontentHeight']){
