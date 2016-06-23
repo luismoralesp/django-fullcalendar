@@ -4,7 +4,15 @@
 	    if (!window.configure_calendar){
 	    	window.configure_calendar = {};
 	    }
-	    //{{data|safe }}
+	    var data = {{data|safe }};
+	    var str = "";
+	    for (var i in data){
+	    	if (prototype.toString.call( data[i] ) === '[object Array]'){
+	    	   str += i + "=" + data[i][0];
+	    	}else{
+	    	   str += i + "=" + data[i];
+	    	}
+	    }
 	    configure_calendar['events'] = '{{url}}';
 	    if (!configure_calendar['ontentHeight']){
 	    	configure_calendar['ontentHeight'] = 'auto';
