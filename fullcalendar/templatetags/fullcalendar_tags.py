@@ -1,13 +1,14 @@
 from django import template
 from django.utils.safestring import mark_safe
 from ..fullcalendar import css_url, print_css_url, javascript_url, jquery_url, jquery_ui_url
+import json
 
 register = template.Library()
 
 
 @register.inclusion_tag("fullcalendar/calendar.html")
 def calendar(url, data={}):
-    return {'url':url, 'data': data}
+    return {'url':url, 'data': json.dumps(data)}
 
 @register.inclusion_tag("fullcalendar/calendar_init.html")
 def calendar_init(calendar_config_options):
