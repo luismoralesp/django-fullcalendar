@@ -7,6 +7,9 @@
 	    var data = {{data|safe }};
 	    var str = "";
 	    for (var i in data){
+	    	if (str != ""){
+	    		str += "&";
+	    	}
 	    	if (Object.prototype.toString.call( data[i] ) === '[object Array]'){
 	    	   str += i + "=" + data[i][0];
 	    	}else{
