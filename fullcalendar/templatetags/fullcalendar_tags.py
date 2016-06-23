@@ -6,8 +6,8 @@ register = template.Library()
 
 
 @register.inclusion_tag("fullcalendar/calendar.html")
-def calendar(url):
-    return {'url':url}
+def calendar(url, data={}):
+    return {'url':url, 'data': data}
 
 @register.inclusion_tag("fullcalendar/calendar_init.html")
 def calendar_init(calendar_config_options):
