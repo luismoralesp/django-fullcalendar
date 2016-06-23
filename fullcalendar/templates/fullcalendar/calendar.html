@@ -13,7 +13,7 @@
 	    	   str += i + "=" + data[i];
 	    	}
 	    }
-	    configure_calendar['events'] = '{{url}}';
+	    configure_calendar['events'] = '{{url}}?' + str;
 	    if (!configure_calendar['ontentHeight']){
 	    	configure_calendar['ontentHeight'] = 'auto';
 	    }
