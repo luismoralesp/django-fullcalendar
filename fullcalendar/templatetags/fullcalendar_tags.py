@@ -53,6 +53,12 @@ def fullcalendar_jquery():
 def fullcalendar_jquery_ui():
     url = fullcalendar_jquery_ui_url()
     return mark_safe("<script src='%s'></script>" % url)
+    
+
+@register.simple_tag
+def fullcalendar_lang():
+    url = fullcalendar_lang_url()
+    return mark_safe("<script src='%s'></script>" % url)
 
 @register.simple_tag
 def fullcalendar_javascript():
@@ -60,5 +66,5 @@ def fullcalendar_javascript():
     return mark_safe("<script src='%s'></script>" % url)
 
 @register.simple_tag
-def lang_url():
+def fullcalendar_lang_url():
     return lang_url()
