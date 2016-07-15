@@ -38,6 +38,7 @@ django-fullcalendar now gets FullCalendar_ javascript and CSS dependency files f
       'javascript_url': <path_or_url_to_javascript_file>,
       'jquery_url': <path_or_url_to_jquery_file>,
       'jquery_ui_url': <path_or_url_to_jquery_ui_file>,
+      'lang': <path_or_url_to_lang>,
   }
 
 Usage
@@ -59,6 +60,7 @@ Your templates should basically look something like this:
       {% fullcalendar_jquery %}
       {% fullcalendar_jquery_ui %} 
       {% fullcalendar_javascript %}
+      {% fullcalendar_lang %}
         
       {% calendar_init event_url %}
 
